@@ -1,0 +1,15 @@
+/* VideoPlayer.css */
+.video-player {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-element {
+  width: 100%;
+  height: auto;
+  display: block;
+}
