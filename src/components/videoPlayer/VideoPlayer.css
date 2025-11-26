@@ -6,6 +6,7 @@
   background: #000;
   border-radius: 8px;
   overflow: hidden;
+  width: 100%;
 }
 
 .video-element {

@@ -4,11 +4,32 @@
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .app-header {
   text-align: center;
   margin-bottom: 30px;
+  width: 100%;
+}
+
+.app-header h1 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.app-header p {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.app-header small {
+  color: #888;
+  font-style: italic;
 }
 
 .app-controls {
@@ -17,6 +38,8 @@
   margin-bottom: 20px;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .btn {
@@ -25,6 +48,12 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .btn-primary {
@@ -32,9 +61,17 @@
   color: white;
 }
 
+.btn-primary:hover {
+  background: #0056b3;
+}
+
 .btn-secondary {
   background: #6c757d;
   color: white;
+}
+
+.btn-secondary:hover {
+  background: #545b62;
 }
 
 .info-btn {
@@ -44,11 +81,117 @@
   padding: 8px 16px;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.info-btn:hover {
+  background: #138496;
+  transform: translateY(-2px);
+}
+
+.main-video-player {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px 0;
 }
 
 .concepts-demo {
   margin-top: 40px;
-  padding: 20px;
+  padding: 30px;
   background: #f8f9fa;
   border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.concepts-demo h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.concepts-demo ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.concepts-demo li {
+  padding: 8px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modal-content h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.video-options {
+  text-align: left;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.video-options label {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.video-options label:hover {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+  
+  .app-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .concepts-demo {
+    padding: 20px;
+    margin-top: 20px;
+  }
+}
+
+/* Custom input alignment */
+.custom-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.custom-input {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 300px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.input-hint {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
 }
